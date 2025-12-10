@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edoardo</title>
+
+    <!-- ====== GOOGLE FONTS ====== -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ====== GLOBAL STYLES ====== */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #111;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* ====== HEADER ====== */
+        header {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #4CAF50, #9C27B0, #F44336);
+            background-size: 300% 300%;
+            animation: gradientShift 10s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header h1 {
+            font-size: 60px;
+            margin: 0;
+            animation: fadeIn 2s ease;
+        }
+
+        header p {
+            font-size: 20px;
+            opacity: 0.8;
+            animation: fadeIn 3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ====== ABOUT SECTION ====== */
+        .about {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ====== IMAGE SCROLLER ====== */
+        .scroller-wrapper {
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 40px 0;
+            background: #222;
+            margin-top: 40px;
+        }
+
+        .scroller {
+            display: inline-flex;
+            animation: scrollImages 20s linear infinite;
+        }
+
+        .scroller img {
+            width: 250px;
+            margin: 0 20px;
+            border-radius: 15px;
+            border: 3px solid #9C27B0;
+            transition: transform 0.3s ease;
+        }
+
+        .scroller img:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes scrollImages {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ====== CONTACT SECTION ====== */
+        footer {
+            margin-top: 60px;
+            padding: 50px 20px;
+            background: #111;
+            color: white;
+            border-top: 3px solid #4CAF50;
+            text-align: center;
+        }
+
+        footer a {
+            color: #9C27B0;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #F44336;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ====== HEADER ====== -->
+    <header>
+        <h1>Edoardo</h1>
+        <p>Welcome to my personal portfolio — Creative Developer & Designer</p>
+    </header>
+
+    <!-- ====== ABOUT ME ====== -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            <!-- EDIT THIS TEXT LATER -->
+            Hi! My name is Edoardo. I am passionate about web development, UI/UX design,
+            and building modern digital experiences.  
+            This space will showcase my projects, ideas, and creations.
+        </p>
+    </section>
+
+    <!-- ====== SCROLLING IMAGES ====== -->
+    <div class="scroller-wrapper">
+        <div class="scroller">
+            <!-- Add/remove images inside your images folder -->
+            <img src="images/img1.jpg" alt="Image 1">
+            <img src="images/img2.jpg" alt="Image 2">
+            <img src="images/img3.jpg" alt="Image 3">
+            <img src="images/img4.jpg" alt="Image 4">
+
+            <!-- DUPLICATE for smooth looping -->
+            <img src="images/img1.jpg" alt="Image 1">
+            <img src="images/img2.jpg" alt="Image 2">
+            <img src="images/img3.jpg" alt="Image 3">
+            <img src="images/img4.jpg" alt="Image 4">
+        </div>
+    </div>
+
+    <!-- ====== CONTACT ====== -->
+    <footer>
+        <h2>Contact Me</h2>
+        <p>
+            <!-- EDIT YOUR CONTACT INFO LATER -->
+            Email: <a href="mailto:your-email@example.com">your-email@example.com</a><br>
+            GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a><br>
+            LinkedIn: <a href="#">Your LinkedIn</a>
+        </p>
+    </footer>
+
+</body>
+</html>
